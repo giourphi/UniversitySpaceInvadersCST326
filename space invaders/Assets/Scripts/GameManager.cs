@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
 
         if (lives <= 0)
         {
-            endScreen.text = "GAME OVER!";
+           // endScreen.text = "GAME OVER!";
             
             if (scored > highScoreValue)
             {
@@ -110,8 +110,8 @@ public class GameManager : MonoBehaviour
                 }
                 // DontDestroyOnLoad(this);
             }
-            uiRoot.SetActive(false);
-            SceneManager.LoadScene(sceneBuildIndex: 2,LoadSceneMode.Additive);
+            //uiRoot.SetActive(false);
+           // SceneManager.LoadScene(sceneBuildIndex: 2,LoadSceneMode.Additive);
             restartButton.SetActive(true);
             
         }

@@ -7,7 +7,7 @@ public class anotherGameManager : MonoBehaviour
 {
 
     public GameObject uiRoot;
-    private static  GameObject playerInstance; 
+    private static  anotherGameManager playerInstance; 
     // Start is called before the first frame update
     void Start()
     {
@@ -16,17 +16,18 @@ public class anotherGameManager : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
-
-        if (playerInstance == null)
+        
+        if (playerInstance != null)
         {
-            playerInstance =this.gameObject ;
+            Destroy(playerInstance);
+            playerInstance = this;
+
         }
         else
-        {
-           Destroy(gameObject);
+        { 
+            playerInstance =this ;
         }
-       
+
        
        
     }

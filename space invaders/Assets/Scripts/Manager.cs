@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Manager : MonoBehaviour
 {
     public GameObject uiRoot;
-    private static  GameObject playerInstance;
+    private static  Manager playerInstance;
 
     private float timeVal ;
     // Start is called before the first frame update
@@ -16,26 +16,27 @@ public class Manager : MonoBehaviour
     }
     void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
-
-        if (playerInstance == null)
+        
+        if (playerInstance != null)
         {
-            playerInstance =this.gameObject ;
+            Destroy(playerInstance);
+            playerInstance = this;
+
         }
         else
         { 
-            Destroy(gameObject);
+            playerInstance =this ;
         }
-       
+
        
        
     }
     // Update is called once per frame
     void Update()
     {
-       timeVal =Time.deltaTime * 5f;
+     /*  timeVal =Time.deltaTime * 5f;
        timeVal--;
-
+*/
        if (Input.GetKey(KeyCode.E))
        {
            backToMainMenu();

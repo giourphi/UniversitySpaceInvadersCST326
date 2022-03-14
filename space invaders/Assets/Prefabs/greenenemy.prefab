@@ -88,13 +88,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7483517710255911465}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 796aad014e2107342a60ed88af81c745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 7483517710255911465}
-  enemyProjectile: {fileID: 2457785739244962049, guid: 6ca36c4c64974414eaab204ec93276ea, type: 3}
+  enemyProjectile: {fileID: 2457785739244962049, guid: 32b774a82902deb4b9f3cb341107d283, type: 3}
   enemyProjectileClone: {fileID: 0}
 --- !u!212 &6382895198638407683
 SpriteRenderer:

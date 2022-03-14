@@ -51,7 +51,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6, y: 6}
+    oldSize: {x: 0.32, y: 0.16}
     newSize: {x: 6, y: 6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -88,13 +88,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7483517710255911465}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 796aad014e2107342a60ed88af81c745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 7483517710255911465}
-  enemyProjectile: {fileID: 2457785739244962049, guid: 6ca36c4c64974414eaab204ec93276ea, type: 3}
+  enemyProjectile: {fileID: 2457785739244962049, guid: 32b774a82902deb4b9f3cb341107d283, type: 3}
   enemyProjectileClone: {fileID: 0}
 --- !u!212 &2357729342457943706
 SpriteRenderer:
@@ -136,8 +136,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 355e5707f4fd6b34ca68daa188896b4e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: aeddc37e0a45776488d235a9c22ca3c2, type: 3}
+  m_Color: {r: 1, g: 0, b: 0.7395067, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
