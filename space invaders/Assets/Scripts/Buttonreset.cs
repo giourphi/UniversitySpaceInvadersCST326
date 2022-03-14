@@ -8,6 +8,7 @@ public class Buttonreset : MonoBehaviour
 {
     public void butotnReset()
     {
-        SceneManager.LoadScene(1);
+        
+        
     }
 }

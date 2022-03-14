@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5446679291949460982}
   - component: {fileID: 5446679291949460981}
   - component: {fileID: 5446679291949460980}
-  - component: {fileID: 5446679291949460977}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Finish
@@ -131,16 +130,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &5446679291949460977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5446679291949460987}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f295e977045c7d44cb1edf3dc21042d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: 

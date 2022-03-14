@@ -26,9 +26,32 @@ public class GameManager : MonoBehaviour
     public static float scored;
     private static GameManager Instance;
     public static int highScoreValue;
+    private static  GameObject playerInstance; 
+
+    public GameObject uiRoot;
     // Start is called before the first frame update
+
+
+     void Awake()
+    {
+       DontDestroyOnLoad(this.gameObject);
+
+       if (playerInstance == null)
+       {
+           playerInstance =this.gameObject ;
+       }
+       else
+       { 
+           Destroy(gameObject);
+       }
+       
+       
+       
+    }
+
     void Start()
     {
+        Time.timeScale = 1;
         livesScore.text = "Lives: " + lives;
         highScore.text = PlayerPrefs.GetInt("HighScore",0000).ToString();
         restartButton.SetActive(false);
@@ -36,19 +59,29 @@ public class GameManager : MonoBehaviour
         
     }
 
-    void Awake()
+
+    public void ResetButton()
+    {
+        uiRoot.SetActive(false);
+        SceneManager.LoadScene(1,LoadSceneMode.Additive);
+        
+    }
+
+ 
+    /*void Awake()
     {
         if(Instance!=null)
         {
             Destroy(Instance);
             Instance = this;
+            Destroy(gameObject);
         }
         else
         {
             Instance = this;
         }
         DontDestroyOnLoad(gameObject);
-    }
+    }*/
 
      
   
@@ -70,14 +103,15 @@ public class GameManager : MonoBehaviour
             {
                 highScoreValue = (int) scored;
                // highScore.text = "HighScore: " + highScoreValue.ToString("0000");
-                PlayerPrefs.SetInt("HighScore",highScoreValue);
-               /* if (highScoreValue > PlayerPrefs.GetInt("HighScore", 0))
+                if (highScoreValue > PlayerPrefs.GetInt("HighScore", 0))
                 {
-                    
+                    PlayerPrefs.SetInt("HighScore",highScoreValue);
                     highScore.text = highScoreValue.ToString();
-                }*/
+                }
                 // DontDestroyOnLoad(this);
             }
+            uiRoot.SetActive(false);
+            SceneManager.LoadScene(sceneBuildIndex: 2,LoadSceneMode.Additive);
             restartButton.SetActive(true);
             
         }
