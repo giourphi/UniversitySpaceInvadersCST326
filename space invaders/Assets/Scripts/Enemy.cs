@@ -16,10 +16,13 @@ public class Enemy : MonoBehaviour
        public GameObject enemy;
        public GameObject enemyProjectile;
        public GameObject enemyProjectileClone;
+       public GameObject bullet;
+       private Animator anim;
        void Start()
-    {
-    
-    }
+       {
+
+           anim = GetComponent<Animator>();
+       }
 
 
     void Update()
@@ -50,13 +53,28 @@ public class Enemy : MonoBehaviour
 
 
     }
+
+    public void PlayAnimation()
+    {
+        GetComponent<Animator>().Play("deathanimation");
+    }
+    
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Player"))
         {
             GameManager.lives--;
         }
-            
+
+       /* if (col.gameObject == bullet)
+        {
+            if (gameObject.CompareTag("EnemyGreen"))
+            {
+                anim.SetTrigger("deathanimation");
+            }
+
+        }
+            */
     }
 
     void fireEnemyProjectile()

@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 295174762959488055}
   - component: {fileID: 8852813896497863988}
   - component: {fileID: 7089060339265509527}
+  - component: {fileID: 1611607745896146333}
   m_Layer: 0
-  m_Name: Redenemy
+  m_Name: Redenemy 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,8 +95,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 7483517710255911465}
-  enemyProjectile: {fileID: 2457785739244962049, guid: 6ca36c4c64974414eaab204ec93276ea, type: 3}
+  enemyProjectile: {fileID: 2457785739244962049, guid: 32b774a82902deb4b9f3cb341107d283, type: 3}
   enemyProjectileClone: {fileID: 0}
+  bullet: {fileID: 2457785739244962049, guid: e9d7b3cfc2536bc4abf955d6e8136098, type: 3}
 --- !u!212 &7089060339265509527
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -147,3 +149,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1611607745896146333
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7483517710255911465}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf772115467f5074d86efade9c96a575, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

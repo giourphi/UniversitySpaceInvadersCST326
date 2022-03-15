@@ -7,39 +7,24 @@ public class anotherGameManager : MonoBehaviour
 {
 
     public GameObject uiRoot;
-    private static  anotherGameManager playerInstance; 
+    private static  anotherGameManager playerInstance;
+
+    public GameObject eventManager;
+    
     // Start is called before the first frame update
+    
     void Start()
     {
+        GameObject.DontDestroyOnLoad(this.gameObject);
         Time.timeScale = 1;
     }
 
-    void Awake()
-    {
-        
-        if (playerInstance != null)
-        {
-            Destroy(playerInstance);
-            playerInstance = this;
 
-        }
-        else
-        { 
-            playerInstance =this ;
-        }
-
-       
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
     public void startGame()
     {
         uiRoot.SetActive(false);
+        eventManager.SetActive(false);
         SceneManager.LoadScene(0, LoadSceneMode.Additive);
     }
 

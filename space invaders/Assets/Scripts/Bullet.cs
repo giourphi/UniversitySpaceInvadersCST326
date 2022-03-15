@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using UnityEditor.Animations;
 using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -12,8 +13,9 @@ public class Bullet : MonoBehaviour
   private Rigidbody2D myRigidbody2D;
   public GameObject bullet;
 
-
   public float speed = 5;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,7 @@ public class Bullet : MonoBehaviour
       }
       if (col.gameObject.tag == "EnemyGreen")
       {
+       
         Destroy(col.gameObject);
         Destroy(bullet);
         GameManager.scored += 20f;
@@ -46,6 +49,7 @@ public class Bullet : MonoBehaviour
       }
       if (col.gameObject.tag == "EnemyBlue")
       {
+        
         Destroy(col.gameObject);
         Destroy(bullet);
         GameManager.scored += 30f;
@@ -53,6 +57,7 @@ public class Bullet : MonoBehaviour
       }
       if (col.gameObject.tag == "EnemyTriangle")
       {
+       
         Destroy(col.gameObject);
         Destroy(bullet);
         GameManager.scored += 50f;

@@ -95,6 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2457785739244962049}
   speed: 5
+  enememy: {fileID: 7483517710255911465, guid: 4e2db53fc37bced4d8916eef6d9b475a, type: 3}
 --- !u!212 &5807699011594858445
 SpriteRenderer:
   m_ObjectHideFlags: 0
